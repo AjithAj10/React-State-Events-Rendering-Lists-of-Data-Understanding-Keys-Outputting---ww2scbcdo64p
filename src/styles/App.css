@@ -6,6 +6,13 @@ h1 {
     text-align: center;
     }
     
+    li{
+        display: flex;
+         justify-content: space-around;
+    }
+    .list{
+        margin: 1rem;
+    }
 textarea{
     border: 2px solid rgb(66, 47, 47);
     background: none;
