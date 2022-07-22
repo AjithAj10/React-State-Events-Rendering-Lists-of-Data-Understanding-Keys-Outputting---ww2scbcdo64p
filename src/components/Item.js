@@ -26,7 +26,7 @@ function Item({list,setList,changeInput,setId}) {
         <div>
             {
                 list.map((e) => {
-                   return <li key={e.id}><input type='text' value={e.title} disabled/>
+                   return <li key={e.id} className='list'><input type='text' value={e.title} className='list' disabled/>
                    <button className='edit' onClick={() => editFn(e)}>Edit</button>
 
                    <button className='delete' onClick={() => deleteTodo(e.id)}>Delete</button>
