@@ -13,24 +13,24 @@ function Item({list,setList,changeInput,setId}) {
 
     function editFn(e){
         // 
-        console.log(e.title);
+        let s = document.getElementsByClassName('list');
+        // console.log(s[0]);
+        // console.log(e.title);
         changeInput(e.title)
         setId(e.id)
         
     }
 
-    function saveTask(){
 
-    }
     return (
         <div>
             {
                 list.map((e) => {
-                   return <li key={e.id} className='list'><input type='text' value={e.title} className='list' disabled/>
+                   return <div key={e.id}><input type='text' className='list' value={e.title} disabled/>
                    <button className='edit' onClick={() => editFn(e)}>Edit</button>
 
                    <button className='delete' onClick={() => deleteTodo(e.id)}>Delete</button>
-                   </li>
+                   </div>
 
             })
             }
